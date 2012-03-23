@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  bumped_at: 2012-03-24 03:57:28
+  board: 
+
+two:
+  bumped_at: 2012-03-24 03:57:28
+  board: 
