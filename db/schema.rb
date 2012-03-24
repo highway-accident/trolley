@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120323233714) do
+ActiveRecord::Schema.define(:version => 20120324000405) do
 
   create_table "boards", :force => true do |t|
     t.string   "name"
@@ -20,5 +20,28 @@ ActiveRecord::Schema.define(:version => 20120323233714) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "discussions", :force => true do |t|
+    t.datetime "bumped_at"
+    t.integer  "board_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "discussions", ["board_id"], :name => "index_discussions_on_board_id"
+
+  create_table "posts", :force => true do |t|
+    t.string   "author"
+    t.string   "email"
+    t.string   "title"
+    t.text     "text"
+    t.string   "file"
+    t.datetime "added_at"
+    t.integer  "discussion_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "posts", ["discussion_id"], :name => "index_posts_on_discussion_id"
 
 end
