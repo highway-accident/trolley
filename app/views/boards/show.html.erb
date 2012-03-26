@@ -1,10 +1,6 @@
 <h1>Board <%= @board.name %></h1>
 
-<%= form_tag(:controller => "discussion", :action => "create") do %>
-    <%= label_tag(:author, "Author:") %>
-    <%= text_field_tag(:author) %>
-    <%= submit_tag("Send") %>
-<% end %>
+<%= render "discussions/new" %>
 
 <% @board.discussions.each do |discussion| %>
     <%= discussion.bumped_at %>

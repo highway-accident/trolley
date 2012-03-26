@@ -1,0 +1,22 @@
+<h1>Thread <%= @discussion.id %></h1>
+
+<%= render "posts/new" %>
+
+<% @discussion.posts.each do |post| %>
+    <div class="post">
+      <div class="head">
+          <span class="title">
+            <%= post.title %>
+          </span>
+
+          <span class="author">
+            <%= post.author %>
+          </span>
+
+          <span class="time">
+            <%= post.added_at %>
+          </span>
+      </div>
+       <%= post.text %>
+    </div>
+<% end %>
