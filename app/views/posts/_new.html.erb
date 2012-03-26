@@ -1,0 +1,28 @@
+<% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
+
+<%= form_for([@discussion, @discussion.posts.build]) do |f| %>
+    <%=  f.label :title %>
+    <%=  f.text_field :title %>
+
+    <%=  f.label :author %>
+    <%=  f.text_field :author %>
+
+    <%=  f.label :text %>
+    <%=  f.text_field :text %>
+
+    <%=  f.label :file %>
+    <%=  f.text_field :file %>
+
+    <%= submit_tag("Send") %>
+<% end %>
