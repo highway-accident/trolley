@@ -21,7 +21,7 @@
     <%= label_tag(:file, "File:") %>
     <%= text_field_tag(:file) %>
 
-    <%= hidden_field_tag(:board, @board.id) %>
+    <%= hidden_field_tag(:board_id, @board.id) %>
 
     <%= submit_tag("Send") %>
 <% end %>

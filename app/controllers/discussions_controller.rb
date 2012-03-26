@@ -14,6 +14,7 @@ class DiscussionsController < ApplicationController
 
   def create
     @discussion = Discussion.new()
+    @discussion.board_id = params[:board_id]
     @post = @discussion.posts.build
     @post.author = params[:author]
     @post.text = params[:text]
