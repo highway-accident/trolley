@@ -19,6 +19,7 @@ class DiscussionsController < ApplicationController
     @post.author = params[:author]
     @post.text = params[:text]
     @post.file = params[:file]
+    @post.added_at = Time.now
     if @discussion.save
       redirect_to @discussion
     else
