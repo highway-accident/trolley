@@ -5,7 +5,6 @@ class DiscussionsController < ApplicationController
 
   def show
     @discussion = Discussion.find(params[:id])
-    @post = Post.new
   end
 
   def new

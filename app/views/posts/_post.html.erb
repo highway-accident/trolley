@@ -1,3 +1,4 @@
+<% if post.id %>
 <div class="post">
     <div class="head">
         <span class="title">
@@ -9,7 +10,7 @@
         </span>
 
         <span class="time">
-            <%= post.added_at && post.added_at.to_s(:added_time) %>
+            <%= post.added_at.to_s(:long) %>
         </span>
 
         <span class="id">
@@ -18,3 +19,4 @@
     </div>
     <%= simple_format(post.text.to_s) %>
 </div>
+<% end %>
