@@ -12,17 +12,25 @@
 
 
 <%= form_for([@discussion, @discussion.posts.build]) do |f| %>
-    <%=  f.label :title %>
-    <%=  f.text_field :title %>
+    <div class="form-row">
+      <div class="label"><%=  f.label :author %></div>
+      <div class="field"><%=  f.text_field :author %></div>
+    </div>
 
-    <%=  f.label :author %>
-    <%=  f.text_field :author %>
+    <div class="form-row">
+        <div class="label"><%=  f.label :title %></div>
+        <div class="field"><%=  f.text_field :title %></div>
+    </div>
 
-    <%=  f.label :text %>
-    <%=  f.text_field :text %>
+    <div class="form-row">
+      <div class="label"><%=  f.label :text %></div>
+      <div class="field"><%=  f.text_area :text %></div>
+    </div>
 
-    <%=  f.label :file %>
-    <%=  f.text_field :file %>
+    <div class="form-row">
+      <div class="label"><%=  f.label :file %></div>
+      <div class="field"><%=  f.text_field :file %></div>
+    </div>
 
     <%= submit_tag("Send") %>
 <% end %>

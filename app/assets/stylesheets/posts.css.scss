@@ -1,3 +1,49 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+form.new_post {
+  margin: 0 auto;
+  width: 500px;
+}
+
+
+.form-row {
+  margin-bottom: 5px;
+}
+
+.form-row .label {
+  float: left;
+  padding: 5px;
+  width: 100px;
+  height: 100%;
+  background-color: #EEAA88;
+  color: #600000;
+  font-weight: bold;
+}
+
+.form-row .field {
+  margin-left: 115px;
+  padding-top: 3px;
+}
+
+.post {
+  float: left;
+  margin-bottom: 10px;
+  padding: 3px 10px 0 10px;
+  background-color: #F0E0D6;
+  border: 1px solid #DDCCC5;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  color: #600000;
+  clear: both;
+}
+
+.post .title {
+  color: #CC1105;
+}
+
+.post .author {
+  color: #117743;
+  font-weight: bold;
+}

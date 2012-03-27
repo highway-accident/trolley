@@ -1,4 +1,6 @@
-<h1>Boards index</h1>
+<h1>Welcome</h1>
+[
 <% @boards.each do |board| %>
-    <%= link_to board.name, board %>
+    <%= link_to "/"+board.name+"/", board %>
 <% end %>
+]

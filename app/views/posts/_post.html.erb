@@ -5,12 +5,16 @@
         </span>
 
         <span class="author">
-            <%= post.author %>
+            <%= post.author != "" ? post.author : "Anonymous" %>
         </span>
 
         <span class="time">
-            <%= post.added_at %>
+            <%= post.added_at && post.added_at.to_s(:added_time) %>
+        </span>
+
+        <span class="id">
+            <a href="#">#<%= post.id %></a>
         </span>
     </div>
-    <%= post.text %>
+    <%= simple_format(post.text.to_s) %>
 </div>
