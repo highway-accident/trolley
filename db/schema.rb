@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120324000405) do
+ActiveRecord::Schema.define(:version => 20120327103736) do
 
   create_table "boards", :force => true do |t|
     t.string   "name"
@@ -38,8 +38,12 @@ ActiveRecord::Schema.define(:version => 20120324000405) do
     t.string   "file"
     t.datetime "added_at"
     t.integer  "discussion_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
   end
 
   add_index "posts", ["discussion_id"], :name => "index_posts_on_discussion_id"

@@ -11,7 +11,7 @@
 <% end %>
 
 
-<%= form_tag("/discussions", :method => "post") do %>
+<%= form_tag("/discussions", :method => "post", :enctype => "multipart/form-data") do %>
     <%= label_tag(:author, "Author:") %>
     <%= text_field_tag(:author) %>
 
@@ -19,7 +19,7 @@
     <%= text_field_tag(:text) %>
 
     <%= label_tag(:file, "File:") %>
-    <%= text_field_tag(:file) %>
+    <%= file_field_tag(:file) %>
 
     <%= hidden_field_tag(:board_id, @board.id) %>
 

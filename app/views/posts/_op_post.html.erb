@@ -1,5 +1,12 @@
 <% if post.id %>
 <div class="post clearfix">
+    <div class="image">
+      <div class="info">
+        <%= post.file_file_name %> (<%= post.file_file_size %>)
+      </div>
+      <a href="#"><%= image_tag post.file.url %></a>
+    </div>
+
     <div class="head">
         <span class="title">
             <%= post.title %>
@@ -17,15 +24,6 @@
             <a href="#">#<%= post.id %></a>
         </span>
     </div>
-
-    <% if post.file_file_name %>
-    <div class="image">
-        <div class="info">
-            <%= post.file_file_name %> (<%= post.file_file_size %>)
-        </div>
-        <a href="#"><%= image_tag post.file.url %></a>
-    </div>
-    <% end %>
 
     <div class="text">
         <%= simple_format(post.text.to_s) %>
