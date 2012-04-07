@@ -1,0 +1,7 @@
+<div class="thread clearfix">
+  <% @op_post = discussion.posts[0] %>
+  <%= render "posts/op_post" %>
+
+  <%= render discussion.posts[1..4] %>
+</div>
+<hr>

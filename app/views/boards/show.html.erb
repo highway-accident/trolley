@@ -2,11 +2,4 @@
 
 <%= render "discussions/new" %>
 
-<% @board.discussions.each do |discussion| %>
-    <div class="thread">
-        <%= discussion.posts[0].text %>
-        <%= link_to "[Reply]", discussion %>
-
-        <%= render discussion.posts[1..-1] %>
-    </div>
-<% end %>
+<%=  render @board.discussions  %>
