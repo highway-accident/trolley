@@ -11,17 +11,26 @@
 <% end %>
 
 
-<%= form_tag("/discussions", :method => "post", :enctype => "multipart/form-data") do %>
-    <%= label_tag(:author, "Author:") %>
-    <%= text_field_tag(:author) %>
+<%= form_tag("/discussions", :class => "new_post", :method => "post", :enctype => "multipart/form-data") do %>
+    <div class="form-row">
+      <div class="label"><%= label_tag(:author, "Author:") %></div>
+      <div class="field"><%= text_field_tag(:author) %></div>
+    </div>
 
-    <%= label_tag(:text, "Text:") %>
-    <%= text_field_tag(:text) %>
+    <div class="form-row">
+      <div class="label"><%= label_tag(:title, "Title:") %></div>
+      <div class="field"><%= text_field_tag(:title) %></div>
+    </div>
 
-    <%= label_tag(:file, "File:") %>
-    <%= file_field_tag(:file) %>
+    <div class="form-row">
+      <div class="label"><%= label_tag(:text, "Text:") %></div>
+      <div class="field"><%= text_area_tag(:text) %></div>
+    </div>
 
-    <%= hidden_field_tag(:board_id, @board.id) %>
+    <div class="form-row">
+      <div class="label"><%= label_tag(:file, "File:") %></div>
+      <div class="field"><%= file_field_tag(:file) %></div>
+    </div>
 
     <%= submit_tag("Send") %>
 <% end %>
