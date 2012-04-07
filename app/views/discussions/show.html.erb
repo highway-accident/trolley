@@ -1,4 +1,4 @@
-<h1>Thread <%= @discussion.id %></h1>
+<h1><%= link_to @discussion.board.name, @discussion.board %></h1>
 
 <%= render "posts/new" %>
 
