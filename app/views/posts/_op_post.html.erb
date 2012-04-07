@@ -1,32 +1,30 @@
-<% if post.id %>
-<div class="post clearfix">
+<div class="post op clearfix">
     <div class="image">
       <div class="info">
-        <%= post.file_file_name %> (<%= post.file_file_size %>)
+        <%= @op_post.file_file_name %> (<%= @op_post.file_file_size %>)
       </div>
-      <a href="#"><%= image_tag post.file.url %></a>
+      <a href="#"><%= image_tag @op_post.file.url %></a>
     </div>
 
     <div class="head">
         <span class="title">
-            <%= post.title %>
+            <%= @op_post.title %>
         </span>
 
         <span class="author">
-            <%= post.author != "" ? post.author : "Anonymous" %>
+            <%= @op_post.author != "" ? @op_post.author : "Anonymous" %>
         </span>
 
         <span class="time">
-            <%= post.added_at.to_s(:long) %>
+            <%= @op_post.added_at.to_s(:long) %>
         </span>
 
         <span class="id">
-            <a href="#">#<%= post.id %></a>
+            <a href="#">#<%= @op_post.id %></a>
         </span>
     </div>
 
     <div class="text">
-        <%= simple_format(post.text.to_s) %>
+        <%= simple_format(@op_post.text.to_s) %>
     </div>
 </div>
-<% end %>

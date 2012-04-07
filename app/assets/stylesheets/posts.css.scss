@@ -56,3 +56,17 @@ form.new_post {
 .post .text {
   float: left;
 }
+
+.post.op {
+  float: none;
+  background: none;
+  border: none;
+}
+
+.post.op .image {
+  margin-right: 20px;
+}
+
+.post.op .text {
+  float: none;
+}
